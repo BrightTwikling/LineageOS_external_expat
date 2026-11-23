@@ -41,6 +41,7 @@ cc_library {
     name: "libexpat",
     vendor_available: true,
     product_available: true,
+    recovery_available: true,
     double_loadable: true,
     host_supported: true,
     unique_host_soname: true,
@@ -69,9 +70,6 @@ cc_library {
     target: {
         darwin: {
             cflags: ["-fno-common"],
-        },
-        windows: {
-            enabled: true,
         },
         android: {
             sanitize: {
