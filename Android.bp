@@ -69,13 +69,10 @@ cc_library {
 
     target: {
         darwin: {
-            cflags: ["-fno-common"],
+           cflags: ["-fno-common"],
         },
-        android: {
-            sanitize: {
-                integer_overflow: true,
-                misc_undefined: ["bounds"],
-            },
+        windows: {
+           enabled: true,
         },
     },
 
